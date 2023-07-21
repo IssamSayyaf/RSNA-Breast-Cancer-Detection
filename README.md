@@ -59,6 +59,15 @@ Overall, the pre-processing pipeline aims to standardize image dimensions, enhan
   <br>
   <em>Figure 2: TCrope and resize images</em>
 </p>
+## ii. Designing and Training the Model Architecture
+
+In this section, we will discuss the steps involved in designing the model architecture and training the model. Once the preprocessed data is downloaded from the TF record, the first crucial step is to address the dataset's imbalance, as illustrated in Figure 1. To achieve balance, we can carefully select all images containing breast cancer and an equal number of non-cancerous images, resulting in a balanced dataset.
+
+Next, the balanced dataset is split into three subsets: the training set, the validation set, and the test set. Typically, the training set constitutes 60% of the dataset, while the validation set and test set account for 38% and 2%, respectively. Figure 4 provides an illustration of the training set.
+
+The design and architecture of the model will involve selecting appropriate deep learning frameworks, defining the layers and parameters of the model, and configuring the optimizer and loss function. The training process will entail feeding the model with the training set, iteratively adjusting the model's weights, and evaluating its performance on the validation set to prevent overfitting.
+
+The final step involves testing the trained model on the test set to obtain an accurate assessment of its performance and its ability to accurately detect breast cancer from mammogram images.
 
 
 <p align="center">
@@ -67,4 +76,28 @@ Overall, the pre-processing pipeline aims to standardize image dimensions, enhan
   <em>Figure 3: The Processed images.png</em>
 </p>
 
+In this problem will use model for binary classification, which means that it is designed to classify input images into two categories: cancerous or non-cancerous. The model is built using TensorFlow and the EfficientNetB7 architecture, which is a pre-trained convolutional neural network (CNN) that has achieved state-of-the-art performance on many computer vision tasks.
+The first step in the model is to define the input shape of the images, which in this case is 1456 by 728 pixels with one channel (grayscale). Then, an inputs layer is defined using the Input function in Keras.
+Next, a data augmentation layer is defined using Sequential, which applies a series of random transformations to the input images during training. The transformations include horizontal flipping, zooming, and contrast adjustment. This is done to increase the diversity of the training data and prevent overfitting.
 
+<p align="center">
+  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Images%20after%20processing.png" alt="alt text" width="width" height="height" />
+  <br>
+  <em>Figure 4: The trainning Processed images.png</em>
+</p>
+
+In this problem will use model for binary classification, which means that it is designed to classify input images into two categories: cancerous or non-cancerous. The model is built using TensorFlow and the EfficientNetB7 architecture, which is a pre-trained convolutional neural network (CNN) that has achieved state-of-the-art performance on many computer vision tasks.
+The first step in the model is to define the input shape of the images, which in this case is 1456 by 728 pixels with one channel (grayscale). Then, an inputs layer is defined using the Input function in Keras.
+Next, a data augmentation layer is defined using Sequential, which applies a series of random transformations to the input images during training. The transformations include horizontal flipping, zooming, and contrast adjustment. This is done to increase the diversity of the training data and prevent overfitting.
+
+After the augmentation layer, a normalization layer is added to the input to ensure that the pixel values of the images are scaled between 0 and 1. This is important for the training process and can improve the accuracy of the model.
+The pre-trained EfficientNetB7 model is loaded without its top layer, which is the layer responsible for classification. The first 800 layers of the pre-trained model are frozen to prevent their weights from being updated during training, as they have already learned valuable features from a large dataset.
+Then, several convolutional layers are added to the top of the model. Each convolutional layer is followed by a batch normalization layer, which normalizes the outputs of the previous layer to improve training stability. The convolutional layers are used to learn more complex and abstract features from the input images.
+After the convolutional layers, the output is flattened and passed through several dense layers. The dense layers are responsible for learning the final classification decision from the learned features. The number of neurons in the dense layers decreases as the layers get closer to the output layer.
+Finally, the output layer has a single neuron with a sigmoid activation function, which outputs a probability value between 0 and 1. The model shown in Figure 5, this value represents the predicted probability that the input image is cancerous. 
+
+<p align="center">
+  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/The%20Architecture%20of%20the%20proposed%20model.png" alt="alt text" width="width" height="height" />
+  <br>
+  <em>Figure 5: The Architecture of the proposed model</em>
+</p>
