@@ -136,7 +136,7 @@ Overall, the confusion matrix provides valuable information about the performanc
 <p align="center">
   <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Confusion%20Matrix%20Evaluation%20of%20Model%20Performance%20through%20Actual%20vs%20Predicted%20Classifications.png" alt="alt text" width="width" height="height" />
   <br>
-  <em>Figure 7:Confusion Matrix Evaluation of Model Performance through Actual vs Predicted Classifications</em>
+  <em>Figure 7: Confusion Matrix Evaluation of Model Performance through Actual vs Predicted Classifications</em>
 </p>
 
 
@@ -177,7 +177,11 @@ The False Positive Rate (FPR) is a statistical measure used to evaluate the perf
 ### AUC - ROC Curve
 
 The AUC - ROC curve is a performance measurement for classification problems at various threshold settings. It is a probability curve, and AUC represents the degree of separability. Higher AUC values indicate better model performance in distinguishing between classes. For example, in a medical diagnosis scenario, higher AUC signifies the model's ability to effectively distinguish between patients with the disease and those without.
-Figure 11 displays the AUC (Area Under the Curve) score for the proposed model, which is equal to 0.99. This suggests that the model is able to distinguish between positive and negative instances with high accuracy. However, without further information on the specific problem and the data used, it is difficult to determine the significance of this score.
-
+Figure 8 displays the AUC (Area Under the Curve) score for the proposed model, which is equal to 0.99. This suggests that the model is able to distinguish between positive and negative instances with high accuracy. However, without further information on the specific problem and the data used, it is difficult to determine the significance of this score.
+<p align="center">
+  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/AUC%20-%20ROC%20Curve%20for%20the%20proposed%20model.png" alt="alt text" width="width" height="height" />
+  <br>
+  <em>Figure 8: AUC - ROC Curve for the proposed model</em>
+</p>
 
 Overall, these metrics provide crucial insights into the performance of the classification model, aiding in assessing its accuracy and efficiency in detecting breast cancer from mammogram images.
