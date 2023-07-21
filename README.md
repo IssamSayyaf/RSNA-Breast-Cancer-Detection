@@ -101,3 +101,68 @@ Finally, the output layer has a single neuron with a sigmoid activation function
   <br>
   <em>Figure 5: The Architecture of the proposed model</em>
 </p>
+## iii. Results
+
+After training the model for 100 epochs, we achieved a training accuracy of 93.59% and a validation accuracy of 98.7% (see Figure 6). These results suggest that the model has learned to generalize well to unseen data and is likely to perform well on new test data.
+
+To verify the model's performance on test data, we evaluated it on a separate set of previously unseen test samples. The model achieved an accuracy of 98.91% on the test set, which confirms its ability to accurately classify cancer and non-cancer images.
+
+Overall, these results demonstrate the effectiveness of the model in detecting cancer, and suggest that it could be a useful tool for aiding medical professionals in the diagnosis of cancer.
+
+### Confusion Matrix Analysis
+
+A confusion matrix is a table that is often used to describe the performance of a classification model. It summarizes the predictions made by a classifier against the actual labels of the data being classified.
+
+The confusion matrix is a 2x2 table, where each row represents the instances in a predicted class and each column represents the instances in an actual class as shown in Figure 8. The four possible outcomes are:
+
+- True Positive (TP): the classifier predicted the class correctly and the actual class was positive.
+- False Positive (FP): the classifier predicted the class incorrectly and the actual class was negative.
+- False Negative (FN): the classifier predicted the class incorrectly and the actual class was positive.
+- True Negative (TN): the classifier predicted the class correctly and the actual class was negative.
+
+In the given result of the confusion matrix, the table shows that there were 496 true negative predictions and 7 false negative predictions for the first class. Additionally, there were 8 false positive predictions and 497 true positive predictions for the second class as shown in Figure 8.
+
+These results suggest that the model performed well in classifying both classes, with a high number of true positive and true negative predictions. However, there were a small number of false positive and false negative predictions, indicating that there may be some misclassification errors.
+
+Overall, the confusion matrix provides valuable information about the performance of the classification model and can help identify areas for improvement and optimization.
+
+
+Precision, recall, and F1 score are essential metrics used to evaluate the performance of a binary classification model. They offer valuable insights into the model's ability to identify positive and negative instances and facilitate the comparison of different models.
+
+### Precision
+
+Precision measures the proportion of true positives among the predicted positive instances, as given by equation (1). A high precision indicates accurate positive predictions, while a low precision suggests an overabundance of false positives. In this case, the precision is 98.6%, signifying a high proportion of true positive predictions.
+
+![Precision](image_precision.png)
+
+### Recall (Sensitivity)
+
+Recall, also known as sensitivity or true positive rate, measures the proportion of true positives correctly identified by the model, as shown in equation (2). A high recall indicates correct identification of positive instances, while a low recall implies missed true positive instances. The recall in this case is 98.4%, denoting the model's high ability to correctly identify positive instances.
+
+![Recall](image_recall.png)
+
+### Specificity
+
+Specificity is the proportion of true negatives (TN) correctly identified by the model over the total number of actual negative samples, as indicated by equation (3). The specificity of the model equals 98.6%, reflecting its capability to correctly identify negative instances.
+
+![Specificity](image_specificity.png)
+
+### F1 Score
+
+The F1 score represents the harmonic mean of precision and recall, providing a balanced measure of the two metrics. It is calculated as the weighted average of precision and recall, as given by equation (4). A higher F1 score indicates better performance. In this case, the F1 score is 98.5%, indicating a strong balance between precision and recall.
+
+![F1 Score](image_f1_score.png)
+
+### False Positive Rate (FPR)
+
+The False Positive Rate (FPR) is a statistical measure used to evaluate the performance of a binary classification model. It represents the ratio of false positive predictions made by the model to the total number of actual negative instances, as shown in equation (5). The FPR for the proposed model equals 1.39%.
+
+![FPR](image_fpr.png)
+
+### AUC - ROC Curve
+
+The AUC - ROC curve is a performance measurement for classification problems at various threshold settings. It is a probability curve, and AUC represents the degree of separability. Higher AUC values indicate better model performance in distinguishing between classes. For example, in a medical diagnosis scenario, higher AUC signifies the model's ability to effectively distinguish between patients with the disease and those without.
+
+![AUC - ROC Curve](image_auc_roc.png)
+
+Overall, these metrics provide crucial insights into the performance of the classification model, aiding in assessing its accuracy and efficiency in detecting breast cancer from mammogram images.
