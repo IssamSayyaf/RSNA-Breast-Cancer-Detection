@@ -134,7 +134,7 @@ Overall, the confusion matrix provides valuable information about the performanc
 
 
 <p align="center">
-  <img src="=https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Confusion%20Matrix%20Evaluation%20of%20Model%20Performance%20through%20Actual%20vs%20Predicted%20Classifications.png" alt="alt text" width="width" height="height" />
+  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Confusion%20Matrix%20Evaluation%20of%20Model%20Performance%20through%20Actual%20vs%20Predicted%20Classifications.png" alt="alt text" width="width" height="height" />
   <br>
   <em>Figure 7:Confusion Matrix Evaluation of Model Performance through Actual vs Predicted Classifications</em>
 </p>
