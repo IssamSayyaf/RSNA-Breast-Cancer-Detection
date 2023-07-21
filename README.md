@@ -53,7 +53,7 @@ The pre-processing pipeline for the RSNA Breast Cancer Detection dataset can be 
    After pre-processing the dataset, saving the images in an efficient format for model training is vital. One effective method is using the TFRecord format.
 
 Overall, the pre-processing pipeline aims to standardize image dimensions, enhance contrast, and balance the dataset, ultimately leading to an optimized dataset for model training and improved model performance, as depicted in Figure 3.
-
+ 
 <p align="center">
   <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Crope%20and%20resize%20images..png" alt="alt text" width="width" height="height" />
   <br>
