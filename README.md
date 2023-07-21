@@ -95,7 +95,7 @@ The pre-trained EfficientNetB7 model is loaded without its top layer, which is t
 Then, several convolutional layers are added to the top of the model. Each convolutional layer is followed by a batch normalization layer, which normalizes the outputs of the previous layer to improve training stability. The convolutional layers are used to learn more complex and abstract features from the input images.
 After the convolutional layers, the output is flattened and passed through several dense layers. The dense layers are responsible for learning the final classification decision from the learned features. The number of neurons in the dense layers decreases as the layers get closer to the output layer.
 Finally, the output layer has a single neuron with a sigmoid activation function, which outputs a probability value between 0 and 1. The model shown in Figure 5, this value represents the predicted probability that the input image is cancerous. 
-
+ 
 <p align="center">
   <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/The%20Architecture%20of%20the%20proposed%20model.png" alt="alt text" width="width" height="height" />
   <br>
