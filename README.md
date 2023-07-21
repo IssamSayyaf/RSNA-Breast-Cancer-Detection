@@ -25,3 +25,32 @@ To overcome these challenges, developers must engage in extensive pre-processing
   <br>
   <em>Figure 1: The Dataset Distribution</em>
 </p>
+
+# Methods
+
+To design an efficient model for breast cancer detection, a well-defined pipeline can be established, encompassing pre-processing of the dataset, designing and training the model architecture, and evaluating the model's performance. The pipeline can be described in the following steps:
+
+## i. Preprocessing
+
+The pre-processing pipeline for the RSNA Breast Cancer Detection dataset can be summarized in the following steps:
+
+1. **Read the DICOM images:**
+   The dataset is provided in DICOM format, which requires reading and conversion into a format compatible with model processing.
+
+2. **Crop the images:**
+   To remove any background noise and reduce redundancy in the images, the breast region must be identified and cropped. Techniques such as thresholding can be employed, as exemplified in Figure 3.
+
+3. **Normalize the pixel values:**
+   Normalizing the pixel values of the images to a range of [0, 255] ensures consistent image representation and prevents model saturation.
+
+4. **Enhance contrast:**
+   Utilizing contrast enhancement techniques, such as Contrast Limited Adaptive Histogram Equalization (CLAHE), can significantly improve the visibility of breast tissue in the images. CLAHE adjusts image contrast locally while preserving overall contrast and image quality.
+
+5. **Resize the images:**
+   Ensuring uniform image dimensions is crucial for consistency and reduced computational load on the model. Therefore, resizing the images to a standardized size is essential.
+
+6. **Save the processed images:**
+   After pre-processing the dataset, saving the images in an efficient format for model training is vital. One effective method is using the TFRecord format.
+
+Overall, the pre-processing pipeline aims to standardize image dimensions, enhance contrast, and balance the dataset, ultimately leading to an optimized dataset for model training and improved model performance, as depicted in Figure 3.
+
