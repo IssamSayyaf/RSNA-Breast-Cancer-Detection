@@ -55,7 +55,7 @@ The pre-processing pipeline for the RSNA Breast Cancer Detection dataset can be 
 Overall, the pre-processing pipeline aims to standardize image dimensions, enhance contrast, and balance the dataset, ultimately leading to an optimized dataset for model training and improved model performance, as depicted in Figure 3.
 
 <p align="center">
-  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Crope%20and%20resize%20images.png" alt="alt text" width="width" height="height" />
+  <img src="https://github.com/IssamSayyaf/RSNA-Breast-Cancer-Detection/blob/main/images/Crope%20and%20resize%20images..png" alt="alt text" width="width" height="height" />
   <br>
   <em>Figure 2: TCrope and resize images</em>
 </p>
